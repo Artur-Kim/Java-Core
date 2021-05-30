@@ -13,6 +13,7 @@ public class HumanApplication {
         Human grigoriy = new Human("Григорий");
 
         sergey.addFriendsInArray(valeriy);
+        sergey.addFriendsInArray(valeriy);
         sergey.addFriendsInArray(grigoriy);
         mikhail.addFriendsInArray(stanislav);
         mikhail.addFriendsInArray(aleksandr);

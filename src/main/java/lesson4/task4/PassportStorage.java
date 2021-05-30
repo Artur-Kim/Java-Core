@@ -2,7 +2,7 @@ package lesson4.task4;
 
 public class PassportStorage {
     static Passport[] passport = new Passport[10];
-    static int index = 0;
+    static int i = 0;
 
     public static boolean ifPassportExist(String series, String number) {
         for (Passport passport : passport) {
@@ -21,6 +21,6 @@ public class PassportStorage {
     }
 
     public static void addPassport(Passport passport) {
-        PassportStorage.passport[index++] = passport;
+        PassportStorage.passport[i++] = passport;
     }
 }

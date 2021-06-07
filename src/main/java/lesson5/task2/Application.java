@@ -1,7 +1,7 @@
 package lesson5.task2;
 
 public class Application {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NullPointerException {
         Cat[] cats = new Cat[]
                 {       new Cat("cat0", 5),
                         new Cat("cat1", 3),

@@ -4,7 +4,7 @@ public class Cat {
     String name;
     int age;
 
-    Cat(String name, int age) {
+    Cat(String name, int age) throws NullPointerException {
         this.name = name;
         this.age = age;
     }

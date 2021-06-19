@@ -15,8 +15,7 @@ public class Application {
         System.out.println("Расписание уроков на неделю");
         scholar.setDiary(diary);
 
-        for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()
-        ) {
+        for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()) {
             System.out.println(entry.getKey().getDay() + ":" + entry.getValue());
 
         }

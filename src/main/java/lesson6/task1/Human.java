@@ -1,10 +1,10 @@
 package lesson6.task1;
 
 public class Human {
-    final String lastName;
-    final String firstName;
-    final int age;
-    final String phone;
+    private final String lastName;
+    private final String firstName;
+    private final int age;
+    private final String phone;
 
     public Human(String lastName, String firstName, int age, String phone) {
         this.lastName = lastName;

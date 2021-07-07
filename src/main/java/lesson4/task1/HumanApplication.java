@@ -4,8 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class HumaApplication {
-    static SimpleDateFormat humanFormateDate = new SimpleDateFormat("dd.MM.yyyy");
+public class HumanApplication {
+    final static SimpleDateFormat HUMAN_FORMATION_DATE = new SimpleDateFormat("dd.MM.yyyy");
 
     public static void main(String[] args) throws ParseException {
         Human human = new Human();
@@ -22,21 +22,21 @@ public class HumaApplication {
         human.setLastName("Иванов");
         String lastName = human.getLastName();
 
-        human.setBirthDate(humanFormateDate.parse("12.12.2050"));
-        String thisDay = humanFormateDate.format(new Date());
-        human.setBirthDate(humanFormateDate.parse(thisDay));
-        String anotherDay = humanFormateDate.format((new Date(new Date().getTime() + 99_999_999_999L)));
-        human.setBirthDate(humanFormateDate.parse(anotherDay));
-        human.setBirthDate(humanFormateDate.parse("24.08.1981"));
+        human.setBirthDate(HUMAN_FORMATION_DATE.parse("12.12.2050"));
+        String today = HUMAN_FORMATION_DATE.format(new Date());
+        human.setBirthDate(HUMAN_FORMATION_DATE.parse(today));
+        String anotherDay = HUMAN_FORMATION_DATE.format((new Date(new Date().getTime() + 99_999_999_999L)));
+        human.setBirthDate(HUMAN_FORMATION_DATE.parse(anotherDay));
+        human.setBirthDate(HUMAN_FORMATION_DATE.parse("24.08.1981"));
         Date birthDate = human.getBirthDate();
 
         try {
-            human.setBirthDate(humanFormateDate.parse("0"));
+            human.setBirthDate(HUMAN_FORMATION_DATE.parse("0"));
         } catch (ParseException ex) {
             System.out.println(ex.getMessage());
         }
         try {
-            human.setBirthDate(humanFormateDate.parse("2021-12-12"));
+            human.setBirthDate(HUMAN_FORMATION_DATE.parse("2021-12-12"));
         } catch (ParseException ex) {
             System.out.println(ex.getMessage());
         }

@@ -1,8 +1,8 @@
 package lesson4.task4;
 
 public class Passport {
-    String number;
-    String series;
+    private String number;
+    private String series;
 
     public Passport() {
         PassportStorage.addPassport(this);
@@ -10,7 +10,7 @@ public class Passport {
 
     public Passport setNumber(String number) {
         Passport result = this;
-        if (PassportStorage.ifPassportExist(series, number)) {
+        if (PassportStorage.isPassportExist(series, number)) {
             if (number.matches("^[0-9]{6}$")) {
                 setCorrectPrint(number);
                 this.number = number;
@@ -23,7 +23,7 @@ public class Passport {
 
     public Passport setSeries(String series) {
         Passport result = this;
-        if (PassportStorage.ifPassportExist(series, number)) {
+        if (PassportStorage.isPassportExist(series, number)) {
             if (series.matches("^[0-9]{4}$")) {
                 setCorrectPrint(series);
                 this.series = series;

@@ -4,7 +4,7 @@ public class PassportStorage {
     static Passport[] passport = new Passport[10];
     static int i = 0;
 
-    public static boolean ifPassportExist(String series, String number) {
+    public static boolean isPassportExist(String series, String number) {
         for (Passport passport : passport) {
             if (passport == null)
                 break;

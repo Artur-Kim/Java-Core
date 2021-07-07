@@ -1,8 +1,10 @@
 package lesson5.task4;
 
+import java.util.Objects;
+
 public class Cat {
-    String name;
-    int age;
+   private String name;
+    private int age;
 
     Cat(String name, int age) throws AgeTooHighException {
 
@@ -17,14 +19,13 @@ public class Cat {
             this.age = age;
 
         } catch (AgeUnderZeroException exception) {
-            // Вывод первой строки StackTrace
             StackTraceElement element = exception.getStackTrace()[0];
             System.out.println(element);
         }
     }
 
     public String getName() {
-        if (name == null) throw new NullPointerException();
+        Objects.requireNonNull(name, "Объект не может быть NULL");
         return name;
     }
 

@@ -4,9 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Human {
-    static String firstName;
-    static String lastName;
-    static Date birthDate;
+    private String firstName;
+    private String lastName;
+    private Date birthDate;
 
     public String getFirstName() {
         getPrint(firstName);
@@ -19,7 +19,7 @@ public class Human {
     }
 
     public Date getBirthDate() {
-        String date = birthDate != null || birthDate == new Date()
+        String date = birthDate != null
                 ? new SimpleDateFormat("dd.MM.yyyy").format(birthDate)
                 : null;
         getPrint(date);
@@ -27,32 +27,32 @@ public class Human {
     }
 
     public void setFirstName(String firstName) {
-        Human.firstName = firstName;
+        this.firstName = firstName;
         if (firstName.matches("^[А-Я][а-я]{2,}$")) {
-            setAviablePrint(firstName);
+            setAvailablePrint(firstName);
         } else {
-            setUnviablePrint(firstName);
+            setUnavailablePrint(firstName);
         }
     }
 
 
     public void setLastName(String lastName) {
-        Human.lastName = lastName;
+        this.lastName = lastName;
         if (lastName.matches("^[А-Я][а-я]{2,}$")) {
-            setAviablePrint(lastName);
+            setAvailablePrint(lastName);
         } else {
-            setUnviablePrint(lastName);
+            setUnavailablePrint(lastName);
         }
     }
 
 
     public void setBirthDate(Date birthDate) {
-        Human.birthDate = birthDate;
+        this.birthDate = birthDate;
         Date currentDate = new Date();
         if (birthDate.before(currentDate)) {
-            setAviablePrint(new SimpleDateFormat("dd.MM.yyyy").format(birthDate));
+            setAvailablePrint(new SimpleDateFormat("dd.MM.yyyy").format(birthDate));
         } else {
-            setUnviablePrint(new SimpleDateFormat("dd.MM.yyyy").format(birthDate));
+            setUnavailablePrint(new SimpleDateFormat("dd.MM.yyyy").format(birthDate));
         }
     }
 
@@ -61,11 +61,11 @@ public class Human {
         System.out.println();
     }
 
-    public void setAviablePrint(String value) {
+    public void setAvailablePrint(String value) {
         System.out.printf("Корректный формат данных - %s%n", value);
     }
 
-    public void setUnviablePrint(String value) {
+    public void setUnavailablePrint(String value) {
         System.out.printf("Некорректный формат данных - %s%n", value);
     }
 }

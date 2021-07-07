@@ -1,11 +1,19 @@
 package lesson5.task2;
 
 public class Cat {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
-    Cat(String name, int age) {
+    public Cat(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 }

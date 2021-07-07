@@ -16,29 +16,29 @@ public class Validate {
         return string.split(" ");
     }
 
-    public static Boolean validHuman(Human human) {
-        Boolean validHuman =
-                        human.getLastName() != null
+    public static Boolean areFieldsFilled(Human human) {
+        Boolean isFieldsEmpty =
+                human.getLastName() != null
                         && human.getFirstName() != null
                         && human.getBirthDate() != null;
-        System.out.println(validHuman ? "Все поля заполнены" : "Не все поля заполнены");
-        return validHuman;
+        System.out.println(isFieldsEmpty ? "Все поля заполнены" : "Не все поля заполнены");
+        return isFieldsEmpty;
     }
 
-    public static Boolean humanArray(Human[] humans) {
-        boolean inputMessage = true;
+    public static Boolean fillingHumanArrayWithMessages(Human[] humans) {
+        boolean checkingFillingTheArray = true;
         for (Human human : humans) {
             if (human == null) {
-                inputMessage = false;
+                checkingFillingTheArray = false;
                 break;
             }
         }
 
-        if (inputMessage) {
+        if (checkingFillingTheArray) {
             System.out.println("Ввод данных окончен");
         } else {
             System.out.println("Введите ещё данные: ");
         }
-        return inputMessage;
+        return checkingFillingTheArray;
     }
 }

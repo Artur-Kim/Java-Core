@@ -20,10 +20,10 @@ public class ServiceDesk {
             Cleaner.takeTask(countTasks);
 
         } else
-            notFoundSpecialist();
+            absenceOfSpecialist();
     }
 
-    private static void notFoundSpecialist() {
+    private static void absenceOfSpecialist() {
         System.out.printf("Специалист по выполнению заявки %d не найден.%n", countTasks);
     }
 }

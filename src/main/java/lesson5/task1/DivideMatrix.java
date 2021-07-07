@@ -14,8 +14,8 @@ public class DivideMatrix {
         for (int i = 0; i < m; i++) {
             dividends[i] = new Random().nextInt(5) + 4;
         }
-        for (int j = 0; j < n; j++) {
-            dividers[j] = new Random().nextInt(3);
+        for (int i = 0; i < n; i++) {
+            dividers[i] = new Random().nextInt(3);
         }
         for (int k = 0; k < m; k++) {
             for (int l = 0; l < n; l++) {

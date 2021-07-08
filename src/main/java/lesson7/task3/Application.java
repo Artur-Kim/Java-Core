@@ -12,18 +12,18 @@ import java.util.Set;
 public class Application {
     public static void main(String[] args) {
         List<ChessFigure> figures = new ArrayList<>();
-        figures.add(new Pawn(Player.WHITE, "B8"));
-        figures.add(new Pawn(Player.BLACK, "F1"));
-        figures.add(new Queen(Player.WHITE, "C4"));
-        figures.add(new Pawn(Player.BLACK, "F6"));
-        figures.add(new Knight(Player.BLACK, "B3"));
-        figures.add(new Pawn(Player.WHITE, "F2"));
-        figures.add(new Pawn(Player.BLACK, "D1"));
-        figures.add(new Rook(Player.WHITE, "G5"));
-        figures.add(new Pawn(Player.BLACK, "F5"));
-        figures.add(new Bishop(Player.WHITE, "E7"));
-        figures.add(new Queen(Player.BLACK, "F1"));
-        figures.add(new King(Player.BLACK, "F10"));
+        figures.add(new Pawn(Player.WHITE, "C4"));
+        figures.add(new Pawn(Player.BLACK, "A5"));
+        figures.add(new Queen(Player.WHITE, "G5"));
+        figures.add(new Pawn(Player.BLACK, "F3"));
+        figures.add(new Knight(Player.BLACK, "C3"));
+        figures.add(new Pawn(Player.WHITE, "H3"));
+        figures.add(new Pawn(Player.BLACK, "A4"));
+        figures.add(new Rook(Player.WHITE, "C8"));
+        figures.add(new Pawn(Player.BLACK, "G6"));
+        figures.add(new Bishop(Player.WHITE, "E4"));
+        figures.add(new Queen(Player.BLACK, "C5"));
+        figures.add(new King(Player.BLACK, "G1"));
 
 
         for (ChessFigure figure : figures)
